@@ -1,0 +1,55 @@
+header {
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+header h1 {
+  margin: 30px 15px;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+header nav {
+  background-color: #424242;
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header nav li {
+  list-style-type: none;
+  padding: 20px 15px;
+}
+
+.main-content p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 400px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header nav ul {
+    gap: 4px;
+  }
+
+  header nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-content h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}

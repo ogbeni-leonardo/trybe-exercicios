@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --font-family: Open Sans;
+  --font-size: 14px;
+  --background-color: rgb(206 206 206);
+  --line-height: 20px;
+  --font-color: black;
+}
+
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  color: var(--font-color);
+  outline: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  max-width: 900px;
+  background-color: rgb(236 239 241);
+  font-size: var(--font-size);
+}
+
+#main {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  padding: 30px;
+  background-color: var(--background-color);
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0 0 0 / 30%);
+}
+
+#adjust > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#adjust label {
+  padding: 8px 0;
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#adjust select {
+  padding: 5px 10px;
+  width: 220px;
+  cursor: pointer;
+}
+
+#article {
+  position: relative;
+  max-height: 580px;
+  overflow: auto;
+}
+
+#article::-webkit-scrollbar {
+  background-color: transparent;
+  width: 2px;
+}
+
+#article::-webkit-scrollbar-thumb {
+  background-color: var(--font-color);
+  border-radius: 50%;
+}
+
+#article h1 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+#article p {
+  max-width: 500px;
+  text-align: justify;
+  line-height: var(--line-height);
+}

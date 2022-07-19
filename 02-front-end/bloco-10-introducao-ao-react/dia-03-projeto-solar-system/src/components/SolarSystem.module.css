@@ -1,0 +1,11 @@
+[ data-testid = 'solar-system' ] {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.planets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

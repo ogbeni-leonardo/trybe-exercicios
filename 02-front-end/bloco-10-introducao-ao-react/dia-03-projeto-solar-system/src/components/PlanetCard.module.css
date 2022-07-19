@@ -1,0 +1,21 @@
+[ data-testid = 'planet-card' ] {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  padding: 10px;
+  transition: 300ms;
+}
+
+.planetName {
+  font-size: 1.1rem;
+}
+
+.planetImage {
+  width: 100px;
+}
+
+[ data-testid = 'planet-card' ]:hover {
+  transform: scale(1.5);
+}

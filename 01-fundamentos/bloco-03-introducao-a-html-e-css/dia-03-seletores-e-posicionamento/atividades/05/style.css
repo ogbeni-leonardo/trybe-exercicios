@@ -1,0 +1,87 @@
+:root{--cor-tema: purple;}
+
+/* Exercício  01*/
+ol li{
+    background-color: yellow;
+}
+
+ol li:nth-child(even){
+    color: green;
+}
+
+ol li:nth-child(odd){
+    text-transform: uppercase;
+}
+
+/* Exercício 02 */
+.header{
+    color: red;
+}
+
+.header em{
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+/* Exercício 03 */
+li{
+    font-size: 20px;
+}
+
+li em{
+    font-weight: bold;
+}
+
+/* Exercício 04 */
+ul li:nth-child(-n+3){
+    color: blue;
+}
+
+ul li[id*="java"]{
+    background-color: pink;
+}
+
+/* Exercício 05 */
+ul a:hover{
+    font-weight: bold;
+    color: var(--cor-tema);
+}
+
+/* Configurações adicionais */
+ul{
+    width: fit-content;
+}
+
+ul li{
+    width: 100%;
+}
+
+ul a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    line-height: 40px;
+    display: inline-block;
+    width: 100%;
+}
+
+a[href*="stackoverflow"]{
+    background-color: orange;
+}
+
+a[href*="w3s"]{
+    background-color: green;
+}
+
+a[href*="mozilla"]{
+    background-color: black;
+}
+
+a[href*="docs"]{
+    background-color: yellow;
+    color: cadetblue;
+}
+
+a[href*="trybe"]{
+    background-color: green;
+}

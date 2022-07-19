@@ -1,0 +1,13 @@
+[ data-testid = 'missions' ] {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.missions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  padding-inline: 10px;
+}

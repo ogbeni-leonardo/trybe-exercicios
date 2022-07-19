@@ -1,0 +1,22 @@
+.App {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  max-height: 350px;
+}
+
+.dogsName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-block: 10px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 15px;
+}

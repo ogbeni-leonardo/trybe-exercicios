@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FAFAFA;
+}
+
+li {
+  padding: 10px;
+  list-style-position: inside;
+}
+
+.block {
+  width: 300px;
+  box-shadow: 0 0 5px rgba(0 0 0 / 20%);
+  background-color: #F5F5F5;
+}
+
+h1 {
+  padding: 30px;
+  margin-bottom: 20px;
+  color: whitesmoke;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #304FFE;
+}
+
+#cryptos {
+  padding-inline: 15px;
+  margin-bottom: 15px;
+}
+
+li:nth-child(even) {
+  background-color: #E0E0E0;
+}
+
