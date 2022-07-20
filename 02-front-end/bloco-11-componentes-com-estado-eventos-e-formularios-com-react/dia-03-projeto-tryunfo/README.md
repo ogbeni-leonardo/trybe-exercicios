@@ -10,7 +10,7 @@ O tema do seu baralho é **livre**, então explore a sua criatividade! Mas use s
 
 ## REQUISITOS
 
-## 1. Crie o formulário que será usado para adicionar cartas ao baralho
+### 1. Crie o formulário que será usado para adicionar cartas ao baralho
 
 - Crie um componente chamado `Form` dentro da pasta **src/components**;
 - Renderize o componente `Form` dentro do componente principal `App`;
@@ -38,7 +38,7 @@ O tema do seu baralho é **livre**, então explore a sua criatividade! Mas use s
 - Será validado se existe um `input` **checkbox** que possui o `data-testid="trunfo-input"`;
 - Será validado se existe um botão que possui o `data-testid="save-button"`.
 
-## 2. Adicione as props necessárias ao componente de formulário
+### 2. Adicione as props necessárias ao componente de formulário
 
 - O componente `Form` deverá receber as seguintes **props**:
 
@@ -81,7 +81,7 @@ O tema do seu baralho é **livre**, então explore a sua criatividade! Mas use s
 - Será validado se o botão de salvar é desabilitado se o valor da prop **isSaveButtonDisabled** for `true`;
 - Será validado se a callback `onSaveButtonClick` é chamada quando o botão é clicado.
 
-## 3. Crie e renderize o componente Card com as props necessárias
+### 3. Crie e renderize o componente Card com as props necessárias
 
 - Crie um componente com o nome Card na pasta **src/components** e renderize-o no componente principal `App`. O componente `Card` deve receber as seguintes props:
 
@@ -117,7 +117,7 @@ O tema do seu baralho é **livre**, então explore a sua criatividade! Mas use s
 - Será validado se o elemento com `data-testid="trunfo-card"` é exibido quando a prop **cardTrunfo** tiver o valor `true`;
 - Será validado se o elemento com `data-testid="trunfo-card"` **não** é exibido quando a prop **cardTrunfo** tiver o valor `false`.
 
-## 4. Crie o preview da carta que está sendo criada pelo formulário
+### 4. Crie o preview da carta que está sendo criada pelo formulário
 
 Os componentes `Form` e `Card` irão compartilhar o mesmo estado para exibir as mesmas informações.
 Quando alguma informação é digitada em algum campo do formulário, o componente `Card` deve exibir a mesma informação em tempo real, criando um preview da carta antes de ela ser salva no baralho (a funcionalidade de salvar será feita nos próximos requisitos).
@@ -126,198 +126,151 @@ Você deverá usar a prop `onInputChange` para passar uma callback para lidar co
 
 #### Informações técnicas:
 
-- Ao digitar algo no campo com o `data-testid="name-input"` do formulário, o mesmo valor deverá ser renderizado no componente `Card`, no elemento com o `data-testid="name-card"`.
+- Ao digitar algo no campo com o `data-testid="name-input"` do formulário, o mesmo valor deverá ser renderizado no componente `Card`, no elemento com o `data-testid="name-card"`;
+- Ao digitar algo no campo com o `data-testid="description-input"` do formulário, o mesmo valor deverá ser renderizado no componente `Card`, no elemento com o `data-testid="description-card"`;
+- Ao digitar algo no campo com o `data-testid="image-input"` do formulário, o mesmo valor deverá ser passado para o componente `Card`, e ser usado no atributo **src** do elemento com o `data-testid="image-card"`;
+- Ao digitar algo no campo com o `data-testid="attr1-input"` do formulário, o mesmo valor deverá ser renderizado no componente `Card`, no elemento com o `data-testid="attr1-card"`;
+- Ao digitar algo no campo com o `data-testid="attr2-input"` do formulário, o mesmo valor deverá ser renderizado no componente `Card`, no elemento com o `data-testid="attr2-card"`;
+- Ao digitar algo no campo com o `data-testid="attr3-input"` do formulário, o mesmo valor deverá ser renderizado no componente `Card`, no elemento com o `data-testid="attr3-card"`;
+- Ao selecionar algum valor no `select` com o `data-testid="rare-input"` do formulário, o mesmo valor deverá ser renderizado no componente `Card`, no elemento com o `data-testid="rare-card"`;
+- Quando o campo do tipo `checkbox` que possui o `data-testid="trunfo-input"` estiver **checked**, deverá ser renderizado no componente `Card` o texto _"Super Trunfo"_ dentro do elemento com o `data-testid="trunfo-card"`.
 
-- Ao digitar algo no campo com o `data-testid="description-input"` do formulário, o mesmo valor deverá ser renderizado no componente `Card`, no elemento com o `data-testid="description-card"`.
+#### O que será verificado:
 
-- Ao digitar algo no campo com o `data-testid="image-input"` do formulário, o mesmo valor deverá ser passado para o componente `Card`, e ser usado no atributo `src` do elemento com o `data-testid="image-card"`.
+- Será validado se é renderizado no preview da carta o valor digitado no `input` Nome do formulário;
+- Será validado se é renderizado no preview da carta o valor digitado no `input` Descrição do formulário;
+- Será validado se é renderizado no preview da carta o valor digitado no `input` referente ao atributo 1 no formulário;
+- Será validado se é renderizado no preview da carta o valor digitado no `input` referente ao atributo 2 no formulário;
+- Será validado se é renderizado no preview da carta o valor digitado no `input` referente ao atributo 3 no formulário;
+- Será validado se é renderizado no preview da carta o `data-testid="trunfo-card"` se o checkbox _"Super Trunfo"_ for selecionado.
 
-- Ao digitar algo no campo com o `data-testid="attr1-input"` do formulário, o mesmo valor deverá ser renderizado no componente `Card`, no elemento com o `data-testid="attr1-card"`.
+### 5. Faça a validação do botão de Salvar no formulário
 
-- Ao digitar algo no campo com o `data-testid="attr2-input"` do formulário, o mesmo valor deverá ser renderizado no componente `Card`, no elemento com o `data-testid="attr2-card"`.
+O botão que possui o atributo `data-testid="save-button"` só deve estar habilitado se todas as informações do formulário estiverem preenchidas corretamente, seguindo as seguintes regras:
 
-- Ao digitar algo no campo com o `data-testid="attr3-input"` do formulário, o mesmo valor deverá ser renderizado no componente `Card`, no elemento com o `data-testid="attr3-card"`.
-
-- Ao selecionar algum valor no `select` com o `data-testid="rare-input"` do formulário, o mesmo valor deverá ser renderizado no componente `Card`, no elemento com o `data-testid="rare-card"`.
-
-- Quando o campo do tipo `checkbox` que possui o `data-testid="trunfo-input"` estiver `checked`, deverá ser renderizado no componente `Card` o texto `Super Trunfo` dentro do elemento com o `data-testid="trunfo-card"`.
-
-**:bulb: Dica:** para campos que precisem de um valor padrão (como o campo de raridade, por exemplo) você pode iniciar o estado já com esse valor.
-
-![requisito-4](images/requisito-4.png)
-
-O que será verificado
-
-- Será validado se é renderizado no preview da carta o valor digitado no input Nome do formulário.
-- Será validado se é renderizado no preview da carta o valor digitado no input Descrição do formulário.
-- Será validado se é renderizado no preview da carta o valor digitado no input referente ao atributo 1 no formulário.
-- Será validado se é renderizado no preview da carta o valor digitado no input referente ao atributo 2 no formulário.
-- Será validado se é renderizado no preview da carta o valor digitado no input referente ao atributo 3 no formulário.
-- Será validado se é renderizado no preview da carta o `data-testid="trunfo-card"` se o checkbox Super Trunfo for selecionado.
-
-## 5. Faça a validação do botão de Salvar no formulário
-
-O botão que possui o atributo data-testid="save-button" só deve estar habilitado se todas as informações do formulário estiverem preenchidas corretamente, seguindo as seguintes regras:
-
-- Os campos `Nome`, `Descrição`, `Imagem` e `Raridade ` devem conter alguma informação (ou seja, os `inputs` não podem estar vazios).
-
-- A soma dos valores dos 3 atributos (`attr1-input`, `attr2-input` e `attr3-input`) não pode ultrapassar o valor **210**.
-
-- Cada um dos três atributos pode ter **no máximo 90 pontos cada**.
-
+- Os campos _Nome_, _Descrição_, _Imagem_ e _Raridade_ devem conter alguma informação;
+- A soma dos valores dos 3 atributos (**attr1-input**, **attr2-input** e **attr3-input**) não pode ultrapassar o valor **210**;
+- Cada um dos três atributos pode ter **no máximo 90 pontos cada**;
 - Os atributos não podem receber valores negativos.
 
-  O que será verificado
+#### O que será verificado:
 
-- Será validado se o botão `salvar` está desabilitado quando a página é renderizada pela primeira vez.
-- Será validado se o botão `salvar` está desabilitado se o campo nome estiver vazio.
-- Será validado se o botão `salvar` está desabilitado se o campo imagem estiver vazio.
-- Será validado se o botão `salvar` está desabilitado se o campo descrição estiver vazio.
-- Será validado se o botão `salvar` está desabilitado se o campo do atributo 1 for maior que 90.
-- Será validado se o botão `salvar` está desabilitado se o campo do atributo 1 for menor que 0.
-- Será validado se o botão `salvar` está desabilitado se o campo do atributo 2 for maior que 90.
-- Será validado se o botão `salvar` está desabilitado se o campo do atributo 2 for menor que 0.
-- Será validado se o botão `salvar` está desabilitado se o campo do atributo 3 for maior que 90.
-- Será validado se o botão `salvar` está desabilitado se o campo do atributo 3 for menor que 0.
-- Será validado se o botão `salvar` está desabilitado se a somatória dos campos de atributos for maior que 210.
-- Será validado se o botão `salvar` é habilitado ao preencher todos os campos do formulário corretamente.
+- Será validado se o botão _salvar_ está desabilitado quando a página é renderizada pela primeira vez.
+- Será validado se o botão _salvar_ está desabilitado se o campo nome estiver vazio.
+- Será validado se o botão _salvar_ está desabilitado se o campo imagem estiver vazio.
+- Será validado se o botão _salvar_ está desabilitado se o campo descrição estiver vazio.
+- Será validado se o botão _salvar_ está desabilitado se o campo do atributo 1 for maior que 90.
+- Será validado se o botão _salvar_ está desabilitado se o campo do atributo 1 for menor que 0.
+- Será validado se o botão _salvar_ está desabilitado se o campo do atributo 2 for maior que 90.
+- Será validado se o botão _salvar_ está desabilitado se o campo do atributo 2 for menor que 0.
+- Será validado se o botão _salvar_ está desabilitado se o campo do atributo 3 for maior que 90.
+- Será validado se o botão _salvar_ está desabilitado se o campo do atributo 3 for menor que 0.
+- Será validado se o botão _salvar_ está desabilitado se a somatória dos campos de atributos for maior que 210.
+- Será validado se o botão _salvar_ é habilitado ao preencher todos os campos do formulário corretamente.
 
-## 6. Crie a função do botão salvar
+### 6. Crie a função do botão salvar
 
-Agora que o botão de salvar já está validado, você pode adicionar uma nova carta ao seu baralho. Isso significa que você precisará criar um novo estado na sua aplicação para salvar a lista de cartas existentes no seu baralho.
+Agora que o botão de _salvar_ já está validado, você pode adicionar uma nova carta ao seu baralho. Isso significa que você precisará criar um novo estado na sua aplicação para salvar a lista de cartas existentes no seu baralho.
 
-:bulb: **Dica:** você pode salvar cada carta em um formato de objeto e ter um _array_ com esses objetos no seu estado.
+- Ao clicar no botão que possui o atributo `data-testid="save-button"`, as informações que foram preenchidas no formulário deverão ser salvas no estado da sua aplicação;
+- Após salvar as informações, os inputs do formulário _Nome_, _Descrição_ e _Imagem_ e o conteúdo do preview da carta deverão ser limpos;
+- Após salvar as informações, os três campos de atributos devem ter valor 0;
+- Após salvar as informações, o campo _Raridade_ deve conter o valor _normal_.
 
-- Ao clicar no botão que possui o atributo `data-testid="save-button"`, as informações que foram preenchidas no formulário deverão ser salvas no estado da sua aplicação.
+#### O que será verificado:
 
-- Após salvar as informações, os `inputs` do formulário `Nome`, `Descrição` e `Imagem` e o conteúdo do preview da carta deverão ser limpos.
+- Será validado se os campos do formulário _Nome_, _Descrição_ e _Imagem_ são limpos após clicar em _salvar_;
+- Será validado se o os três campos de atributos têm o valor _0_ após clicar em _salvar_;
+- Será validado se o campo de _Raridade_ tem o valor _normal_ após clicar em _salvar_.
 
-- Após salvar as informações, os três campos de atributos devem ter valor 0.
+### 7. Crie a validação do Super Trunfo
 
-- Após salvar as informações, o campo `Raridade` deve conter o valor `normal`.
+Em um baralho de Super Trunfo pode existir apenas uma carta _Super Trunfo_. Por isso é necessário fazer uma validação para que somente 1 carta Super Trunfo seja salva no seu baralho:
 
-  O que será verificado
+- Para que uma carta seja salva como _Super Trunfo_ é preciso que o `input` com o `data-testid="trunfo-input"` esteja **checked** na hora de salvar a carta. Por isso, a validação será feita nesse campo. Para fazer essa validação, você deve usar o prop **hasTrunfo** do componente `Form`;
+- Caso já exista uma carta _Super Trunfo_ em seu baralho, o formulário de criação de carta não deverá exibir o _checkbox_ `data-testid="trunfo-input"`. No seu lugar deve ser renderizada a frase: _"Você já tem um Super Trunfo em seu baralho"_.
 
-- Será validado se os campos do formulário `Nome`, `Descrição` e `Imagem` são limpos após clicar em `salvar`.
+#### O que será verificado:
 
-- Será validado se o os três campos de atributos têm o valor `0` após clicar em `salvar`.
+- Será validado se o **checkbox** do _Super Trunfo_ é renderizado ao carregar a página;
+- Será validado se o texto _"Você já tem um Super Trunfo em seu baralho"_ é renderizado caso já exista uma carta _Super Trunfo_ no baralho.
 
-- Será validado se o campo de `Raridade` tem o valor `normal` após clicar em `salvar`.
-
-## 7. Crie a validação do Super Trunfo
-
-Em um baralho de Super Trunfo pode existir apenas uma carta Super Trunfo. Por isso é necessário fazer uma validação para que somente 1 carta Super Trunfo seja salva no seu baralho:
-
-- Para que uma carta seja salva como Super Trunfo é preciso que o input com o `data-testid="trunfo-input"` esteja `checked` na hora de salvar a carta. Por isso, a validação será feita nesse campo. Para fazer essa validação, você deve usar o prop `hasTrunfo` do componente `Form`.
-
-- Caso já exista uma carta Super Trunfo em seu baralho, o formulário de criação de carta não deverá exibir o `checkbox` `data-testid="trunfo-input"`. No seu lugar deve ser renderizada a frase: "Você já tem um Super Trunfo em seu baralho".
-
-**Dica: Lembre-se de utilizar a renderização condicional (na seção [:convenience_store: Desenvolvimento](#orientações)) do React nesse requisito.**
-
-O que será verificado
-
-- Será validado se o checkbox do Super Trunfo é renderizado ao carregar a página.
-
-- Será validado se o texto "Você já tem um Super Trunfo em seu baralho" é renderizado caso já exista uma carta Super Trunfo no baralho.
-
-## 8. Exiba a lista de cartas que estão salvas no estado
+### 8. Exiba a lista de cartas que estão salvas no estado
 
 Você já tem várias cartas legais em seu baralho, agora é a hora de listá-las para que você possa ver toda sua coleção!
 
-- Renderize dentro do component `App` uma lista com todas as cartas que você tem no estado da aplicação.
+- Renderize dentro do component `App` uma lista com todas as cartas que você tem no estado da aplicação;
 - Garanta que sempre que uma carta for adicionada, a lista é atualizada automaticamente.
 
-:bulb: **Dica:** você pode reutilizar o componente `Card` nesse requisito. :bulb:
-
-Imagem Exemplo:
-
-![requisito-8](images/requisito-8.png)
-
-O que será verificado
+#### O que será verificado:
 
 - Será validado se a carta é renderizada na página ao salvá-la.
 - Será validado se a lista é atualizada automaticamente quando uma carta é adicionada.
 
-## 9. Crie um botão para remover uma carta do baralho
+### 9. Crie um botão para remover uma carta do baralho
 
-- Criar em cada carta que está sendo renderizada do seu baralho um button com o texto Excluir e o atributo data-testid="delete-button".
+- Criar em cada carta que está sendo renderizada do seu baralho um button com o texto _"Excluir"_ e o atributo `data-testid="delete-button"`.
 
-  - A carta de _preview_ **não pode ter esse botão**.
+  - A carta de _preview_ não pode ter esse botão;
+  - Ao clicar neste botão, a carta deve ser excluída do seu baralho, ou seja, não deverá mais ser renderizada na página;
+  - Se a carta excluída for uma carta _Super Trunfo_, o _checkbox_ do formulário deverá aparecer novamente, tornando possível a criação de uma nova carta _Super Trunfo_.
 
-  - Ao clicar neste botão, a carta deve ser excluída do seu baralho, ou seja, não deverá mais ser renderizada na página.
-    **Dica: Lembre-se que o baralho está sendo renderizado a partir do estado do seu componente!**
+#### O que será verificado:
 
-  - Se a carta excluída for uma carta Super Trunfo, o `checkbox` do formulário deverá aparecer novamente, tornando possível a criação de uma nova carta Super Trunfo.
+- Será validado se o botão `Excluir` é renderizado na tela apenas nas cartas adicionadas ao baralho;
+- Será validado se ao adicionar uma carta e excluí-la em seguida, a carta não é renderizada;
+- Será validado se ao adicionar duas cartas e excluir uma em seguida, a carta não é renderizada;
+- Será validado se ao excluir uma carta _Super Trunfo_, o _checkbox_ no formulário é renderizado novamente.
 
-  ![requisito-9](images/requisito-9.png)
+## Requisitos bônus
 
-  O que será verificado
+Sua aplicação terá três filtros de listagem de cartas: filtro por _nome_, por _raridade_ e por _Super Trunfo_. Os filtros _nome_ e _raridade_ são acumulativos. O filtro _Super Trunfo_ funciona de forma independente.
 
-- Será validado se o botão `Excluir` é renderizado na tela apenas nas cartas adicionadas ao baralho.
-- Será validado se ao adicionar uma carta e excluí-la em seguida, a carta não é renderizada.
-- Será validado se ao adicionar duas cartas e excluir uma em seguida, a carta não é renderizada.
-- Será validado se ao excluir uma carta Super Trunfo, o checkbox no formulário é renderizado novamente.
+### 10. Crie o filtro pelo nome da carta
 
-# Requisitos bônus
+Para filtro do nome, você deverá criar um campo do tipo _text_ e adicionar o atributo `data-testid="name-filter"`:
 
-Sua aplicação terá três filtros de listagem de cartas: filtro por **nome**, por **raridade** e por **Super Trunfo**. Os filtros **nome** e **raridade** são acumulativos. O filtro **Super Trunfo** funciona de forma independente.
+- Este campo deve ser renderizado sempre, mesmo se não existirem cartas salvas no baralho;
+- Ao digitar neste campo, deve ser renderizado na página apenas as cartas que contenham no _nome_ o texto digitado.
 
-## 10. Crie o filtro pelo nome da carta
+#### O que será verificado:
 
-Para filtro do nome, você deverá criar um campo do tipo text e adicionar o atributo data-testid="name-filter":
-
-- Este campo deve ser renderizado sempre, mesmo se não existirem cartas salvas no baralho.
-
-- Ao digitar neste campo, deve ser renderizado na página apenas as cartas que contenham no `nome` o texto digitado.
-
-![requisito-10](images/requisito-10.png)
-
-O que será verificado
-
-- Será validado se o campo de filtro por nome renderiza na tela.
-- Será validado se apenas as cartas correspondentes aparecem após o filtro.
+- Será validado se o campo de filtro por nome renderiza na tela;
+- Será validado se apenas as cartas correspondentes aparecem após o filtro;
 - Será validado se não renderiza nenhuma carta se não houver nome correspondente.
 
 ## 11. Crie o filtro por raridade da carta
 
-Para filtrar por raridade, você deverá criar um campo do tipo select e adicionar o atributo data-testid="rare-filter":
+Para filtrar por raridade, você deverá criar um campo do tipo `select` e adicionar o atributo `data-testid="rare-filter"`:
 
 - Este `select` deve possuir as seguintes `options`:
 
-  - `todas`
-  - `normal`
-  - `raro`
-  - `muito raro`
+  - _todas_;
+  - _normal_;
+  - _raro_;
+  - _muito raro_.
 
-- Por padrão, a opção `todas` já deverá estar selecionada;
+- Por padrão, a opção _todas_ já deverá estar selecionada;
+- Ao selecionar uma das opções, apenas as cartas que possuem a raridade especificada deverão ser renderizadas. Caso esteja selecionada _todas_, não deve ter filtro de raridade aplicado na lista;
+- Se o campo do filtro _Nome_ estiver preenchido, os dois filtros (por nome e por raridade) devem funcionar em conjunto.
 
-- Ao selecionar uma das opções, apenas as cartas que possuem a raridade especificada deverão ser renderizadas. Caso esteja selecionada `todas`, não deve ter filtro de raridade aplicado na lista.
+#### O que será verificado:
 
-- Se o campo do filtro `Nome` estiver preenchido, os dois filtros (por nome e por raridade) devem funcionar em conjunto.
-
-![requisito-11](images/requisito-11.png)
-
-O que será verificado
-
-- Será validado se o campo de filtro por Raridade renderiza na tela.
-- Será validado se somente as cartas com raridade `normal` são exibidas após o filtro.
-- Será validado se somente as cartas com raridade `raro` são exibidas após o filtro.
-- Será validado se somente as cartas com raridade `muito raro` são exibidas após o filtro.
-- Será validado se todas as cartas são exibidas quando o filtro de raridade está com a opção `todas` selecionada.
+- Será validado se o campo de filtro por raridade renderiza na tela;
+- Será validado se somente as cartas com raridade _normal_ são exibidas após o filtro;
+- Será validado se somente as cartas com raridade _raro_ são exibidas após o filtro;
+- Será validado se somente as cartas com raridade _muito raro_ são exibidas após o filtro;
+- Será validado se todas as cartas são exibidas quando o filtro de raridade está com a opção _todas_ selecionada;
 - Será validado se não renderiza nenhuma carta se não houver raridade correspondente.
 
 ## 12. Crie o filtro de Super Trunfo
 
-Para filtrar por Super Trunfo, você deverá criar um campo do tipo checkbox com a label Super Trunfo e o atributo data-testid="trunfo-filter":
+Para filtrar por _Super Trunfo_, você deverá criar um campo do tipo _checkbox_ com a `label` _Super Trunfo_ e o atributo `data-testid="trunfo-filter"`:
 
-- Ao selecionar este `checkbox`, apenas a carta **Super Trunfo** deverá ser renderizada.
+- Ao selecionar este _checkbox_, apenas a carta **Super Trunfo** deverá ser renderizada;
+- Enquanto o _checkbox_ estiver com o atributo **checked**, ou seja, se estiver selecionado, os inputs dos filtros por nome e por raridade deverão ficar com o atributo **disabled**;
+- Se o _checkbox_ não estiver selecionado, as cartas devem ser renderizadas normalmente, seguindo apenas as regras dos filtros anteriores.
 
-- Enquanto o `checkbox` estiver com o atributo `checked`, ou seja, se estiver selecionado, os `inputs` dos filtros por nome e por raridade deverão ficar com o atributo `disabled`.
-
-* Se o `checkbox` não estiver selecionado, as cartas devem ser renderizadas normalmente, seguindo apenas as regras dos filtros anteriores.
-
-![requisito-12](images/requisito-12.png)
-
-O que será verificado
+#### O que será verificado:
 
 - Será validado se somente a carta de super trunfo é exibida quando esse filtro é selecionado.
