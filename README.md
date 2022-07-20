@@ -101,7 +101,7 @@ Este repositório contém todos os exercícios desenvolvidos por [Leonardo C. Ar
 ##### [Bloco 13: Metodologias Ágeis](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-13-metodologias-ageis)
 
 - [x] 13-1: _Metodologias Ágeis_
-- [x] 13-2: _[Projeto - Frontend Online Store]()_
+- [x] 13-2: _[Projeto - Frontend Online Store](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-13-metodologias-ageis/dia-02-projeto-frontend-online-store)_
 
 ##### [Bloco 14: Testes automatizados com React Testing Library](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-14-testes-automatizados-com-react-testing-library)
 
