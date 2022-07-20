@@ -90,7 +90,7 @@ Este repositório contém todos os exercícios desenvolvidos por [Leonardo C. Ar
 
 - [x] 11-1: _Componentes com estado e eventos_
 - [x] 11-2: _Formulários no React_
-- [x] 11-3: _[Projeto - Tryunfo]()_
+- [x] 11-3: _[Projeto - Tryunfo](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-11-componentes-com-estado-eventos-e-formularios-com-react/dia-03-projeto-tryunfo)_
 
 ##### [Bloco 12: Ciclo de Vida de Componentes e React Router](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-12-ciclo-de-vida-de-componentes-e-react-router)
 
