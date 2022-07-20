@@ -98,10 +98,10 @@ Este repositório contém todos os exercícios desenvolvidos por [Leonardo C. Ar
 - [x] 12-2: _React Router_
 - [x] 12-3: _[Projeto - TrybeTunes](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-12-ciclo-de-vida-de-componentes-e-react-router/dia-03-projeto-trybetunes)_
 
-##### Bloco 13: Metodologias Ágeis
+##### [Bloco 13: Metodologias Ágeis](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-13-metodologias-ageis)
 
-- [ ] 13-1: _Metodologias Ágeis_
-- [ ] 13-2: _[Projeto - Frontend Online Store]()_
+- [x] 13-1: _Metodologias Ágeis_
+- [x] 13-2: _[Projeto - Frontend Online Store]()_
 
 ##### [Bloco 14: Testes automatizados com React Testing Library](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-14-testes-automatizados-com-react-testing-library)
 
