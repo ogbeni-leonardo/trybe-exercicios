@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+::selection {
+  background-color: var(--theme);
+  color: var(--primary);
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  
+  --default-font-color: #212121;
+  --theme: #0f8b8d;
+  --primary: #F5F5F5;
+  --secondary: #EEEEEE;
+  --tertiary: #E0E0E0;
+}
+
+*::-webkit-scrollbar {
+  background-color: var(--tertiary);
+  width: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--theme);
+}
+
+body {
+  color: var(--default-font-color);
+  background-color: #FAFAFA;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: var(--default-font-color);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+button:hover {
+  opacity: 1;
+}
