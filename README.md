@@ -96,7 +96,7 @@ Este repositório contém todos os exercícios desenvolvidos por [Leonardo C. Ar
 
 - [x] 12-1: _Ciclo de vida dos componentes_
 - [x] 12-2: _React Router_
-- [x] 12-3: _[Projeto - TrybeTunes]()_
+- [x] 12-3: _[Projeto - TrybeTunes](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-12-ciclo-de-vida-de-componentes-e-react-router/dia-03-projeto-trybetunes)_
 
 ##### Bloco 13: Metodologias Ágeis
 
