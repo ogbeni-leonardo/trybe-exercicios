@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        height: 50px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p>Color: <span id="value">white</span></p>
+      <button id="previous">Previous color</button>
+      <button id="next">Next color</button>
+      <button id="random">Random color</button>
+    </div>
+    <script>
+      function createColor() {
+        const oneChar = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+        let color = '#';
+        const random = () => Math.floor(Math.random() * oneChar.length);
+        for (let i = 0; i < 6; i += 1) {
+            color += oneChar[random()];
+        }
+        return color;
+      }
+
+      const INITIAL_STATE = {
+        colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
+        index: 0,
+      };
+
+      const reducer = (state = INITIAL_STATE, action) => {
+        const { index, colors } = state;
+        switch (action.type) {
+          case 'NEXT_COLOR':
+              const newIndex = colors.length - 1 > index ? index + 1 : index;
+              return { ...state, index: newIndex };
+          case 'PREVIOUS_COLOR':
+              return { ...state, index: index > 0 ? index - 1 : index };
+          case 'ADD_COLOR':
+              colors.push(createColor());
+              return { ...state, colors, index: colors.length - 1 };
+          default:
+            return state;
+        }
+      }
+      
+      const actionCreator = (type) => ({ type });
+
+      const store = Redux.createStore(reducer);
+
+      const prevButton = document.getElementById('previous');
+      const nextButton = document.getElementById('next');
+      const randButton = document.getElementById('random');
+
+      prevButton.onclick = () => store.dispatch({ type: 'PREVIOUS_COLOR' });
+      nextButton.onclick = () => store.dispatch(actionCreator('NEXT_COLOR'));
+      randButton.onclick = () => store.dispatch(actionCreator('ADD_COLOR'));
+
+      const colorSpan = document.getElementById('value');
+
+      store.subscribe(() => {
+        const { colors, index } = store.getState();
+        value.innerText = colors[index];
+        value.style.backgroundColor = colors[index];
+      });
+    </script>
+  </body>
+</html>
