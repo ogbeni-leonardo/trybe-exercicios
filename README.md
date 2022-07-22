@@ -113,7 +113,7 @@ Este repositório contém todos os exercícios desenvolvidos por [Leonardo C. Ar
 ##### [Bloco 15: Gerenciamento de estado com Redux](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-15-gerenciamento-de-estado-com-redux)
 
 - [x] 15-1: _Introdução ao Redux - O estado global da aplicação_
-- [ ] 15-2: _Usando o Redux no React_
+- [x] 15-2: _Usando o Redux no React_
 - [ ] 15-3: _Usando o Redux no React - Prática_
 - [ ] 15-4: _Usando o Redux no React - Actions Assíncronas_
 - [ ] 15-5: _Testes em React-Redux_
