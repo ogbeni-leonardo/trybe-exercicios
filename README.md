@@ -106,17 +106,17 @@ Este repositório contém todos os exercícios desenvolvidos por [Leonardo C. Ar
 ##### [Bloco 14: Testes automatizados com React Testing Library](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-14-testes-automatizados-com-react-testing-library)
 
 - [x] 14-1: _RTL - Primeiros passos_
-- [x] 14-2: _RTL - Mocks e Inputs_
-- [x] 14-3: _RTL - Testando React Router_
+- [] 14-2: _RTL - Mocks e Inputs_
+- [] 14-3: _RTL - Testando React Router_
 - [x] 14-4: _[Projeto - Testes em React](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-14-testes-automatizados-com-react-testing-library/dia-04-projeto-rtl)_
 
 ##### [Bloco 15: Gerenciamento de estado com Redux](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-15-gerenciamento-de-estado-com-redux)
 
 - [x] 15-1: _Introdução ao Redux - O estado global da aplicação_
 - [x] 15-2: _Usando o Redux no React_
-- [ ] 15-3: _Usando o Redux no React - Prática_
-- [ ] 15-4: _Usando o Redux no React - Actions Assíncronas_
-- [ ] 15-5: _Testes em React-Redux_
+- [x] 15-3: _Usando o Redux no React - Prática_
+- [] 15-4: _Usando o Redux no React - Actions Assíncronas_
+- [] 15-5: _Testes em React-Redux_
 - [ ] 15-6: _[Projeto - Trybe Wallet]()_
 
 ##### Bloco 16: Projeto Jogo de Trivia
