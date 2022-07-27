@@ -106,8 +106,8 @@ Este repositório contém todos os exercícios desenvolvidos por [Leonardo C. Ar
 ##### [Bloco 14: Testes automatizados com React Testing Library](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-14-testes-automatizados-com-react-testing-library)
 
 - [x] 14-1: _RTL - Primeiros passos_
-- [] 14-2: _RTL - Mocks e Inputs_
-- [] 14-3: _RTL - Testando React Router_
+- [ ] 14-2: _RTL - Mocks e Inputs_
+- [ ] 14-3: _RTL - Testando React Router_
 - [x] 14-4: _[Projeto - Testes em React](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-14-testes-automatizados-com-react-testing-library/dia-04-projeto-rtl)_
 
 ##### [Bloco 15: Gerenciamento de estado com Redux](https://github.com/ogbeni-leonardo/trybe-exercicios/tree/main/02-front-end/bloco-15-gerenciamento-de-estado-com-redux)
