@@ -11,10 +11,17 @@ class App extends Component {
     };
 
     this.addTodo = this.addTodo.bind(this);
+    this.remTodo = this.remTodo.bind(this);
   }
 
   addTodo(todo) {
     this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
+  }
+
+  remTodo(todo) {
+    this.setState((state) => ({
+      listTodo: state.listTodo.filter((item) => item !== todo),
+    }));
   }
 
   render() {
@@ -25,7 +32,7 @@ class App extends Component {
         <ul>
           { listTodo.map((todo, index) => (
             <li key={ index + 1 }>
-              <Item content={ todo } />
+              <Item content={ todo } remTodo={ this.remTodo } />
             </li>
           )) }
         </ul>
